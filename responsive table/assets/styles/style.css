@@ -1,0 +1,76 @@
+* {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: large;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 10% 1fr 20%;
+  height: 100vh;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header,
+.footer {
+  display: grid;
+  place-items: center;
+  grid-column: 1/3;
+  background-color: rgb(223, 223, 244);
+}
+
+.main {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-areas:
+    "main-part main-part"
+    "more1 more2"
+    "more3 more3";
+  background-color: beige;
+}
+.main-part {
+  grid-area: main-part;
+  padding: 20px;
+}
+.more1,
+.more2,
+.more3 {
+  display: grid;
+  place-items: center;
+  margin: 20px;
+  background-color: rgb(219, 198, 166);
+}
+.more1 {
+  grid-area: more1;
+}
+.more2 {
+  grid-area: more2;
+}
+.more3 {
+  grid-area: more3;
+}
+
+.sidebar {
+  background-color: rgb(141, 202, 129);
+  padding: 20px;
+}
+
+.footer {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  padding: 10px;
+}
+
+.footer-section {
+  text-align: center;
+  background-color: white;
+  width: 20%;
+  padding: 40px 150px;
+}
